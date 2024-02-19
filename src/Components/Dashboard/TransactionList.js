@@ -30,15 +30,17 @@ const TransactionList = () => {
       <h3>Recent Transactions</h3>
       <TableContainer component={Paper}>
         <Table className={classes.table} aria-label="transaction table">
-          <TableHead className={classes.tableHead}>
-            <TableRow>
-              <TableCell className={classes.tableHeadCell}>Sr.No.</TableCell>
-              <TableCell className={classes.tableHeadCell}>Description</TableCell>
-              <TableCell className={classes.tableHeadCell}>Category</TableCell>
-              <TableCell className={classes.tableHeadCell}>Amount</TableCell>
-              <TableCell className={classes.tableHeadCell}>Date</TableCell>
-            </TableRow>
-          </TableHead>
+          {transactions.length > 0 && (
+            <TableHead className={classes.tableHead}>
+              <TableRow>
+                <TableCell className={classes.tableHeadCell}>Sr.No.</TableCell>
+                <TableCell className={classes.tableHeadCell}>Description</TableCell>
+                <TableCell className={classes.tableHeadCell}>Category</TableCell>
+                <TableCell className={classes.tableHeadCell}>Amount</TableCell>
+                <TableCell className={classes.tableHeadCell}>Date</TableCell>
+              </TableRow>
+            </TableHead>
+          )}
           <TableBody>
             {transactions?.map((transaction, index) => (
               <TableRow key={index} className={classes.tableRow}>
