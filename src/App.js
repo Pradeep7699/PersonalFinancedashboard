@@ -14,7 +14,6 @@ function App() {
         <BrowserRouter> 
        <Routes>
           <Route path="/" element={<Login/>} />
-          {/* <PrivateRoute exact path="/" component={Dashboard} /> */}
           <Route  path="/dashboard" element={<Dashboard/>} />
       </Routes>
       </BrowserRouter>
